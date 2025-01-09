@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+    .navbar ul {
+      flex-direction: column; /* เปลี่ยนเลย์เอาต์เป็นแนวตั้ง */
+      gap: 10px;
+    }
+  }

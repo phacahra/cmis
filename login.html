@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - CMIS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="CMIS Logo">
+      </div>
+      <form>
+        <label for="username">ชื่อผู้ใช้</label>
+        <input type="text" id="username" name="username" placeholder="ชื่อผู้ใช้">
+
+        <label for="password">รหัสผ่าน</label>
+        <input type="password" id="password" name="password" placeholder="รหัสผ่าน">
+
+        <div class="checkbox-container">
+          <input type="checkbox" id="remember" name="remember">
+          <label for="remember">จดจำรหัสผ่านไว้</label>
+        </div>
+
+        <button type="submit" class="login-btn">เข้าสู่ระบบ</button>
+        <p class="forgot-password">กรณีมีรหัสผ่านไม่ได้โปรดติดต่อเจ้าหน้าที่</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+<style>
+    /* General Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(15cm,#FFA366, #F6D3A3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100em;
+}
+
+.login-box {
+  background: white;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.logo img {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  color: #333;
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+form input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+  width: 4%;
+}
+
+.checkbox-container label {
+  font-size: 14px;
+  text-align: left;
+  color: #666;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #FF4C4C;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background: #E63946;
+}
+
+.forgot-password {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #888;
+}
+
+</style>

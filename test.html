@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Management Information System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="CMIS Logo">
+    </div>
+    <div class="user-info">
+      <div class="avatar">
+        <img src="assets/images/Avatar1.png" alt="User Avatar">
+      </div>
+    </div>
+  </header>
+
+  <div class="tab-container">
+    <button class="tab active">เอกสารเข้าใหม่</button>
+    <button class="tab">รายชื่อ</button>
+  </div>
+
+  <div class="content-container">
+    <h1>เอกสารเข้าใหม่</h1>
+    <div class="actions">
+      <input type="text" placeholder="ค้นหา" class="search-input">
+      <button class="search-btn">ค้นหา</button>
+      <button class="add-btn">เพิ่มผู้ประสบปัญหา</button>
+    </div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>วันที่แจ้งเหตุ</th>
+          <th>หน่วยงานที่ส่ง</th>
+          <th>ผู้นำส่ง</th>
+          <th>ชื่อ - สกุลผู้ประสบปัญหา</th>
+          <th>เลขบัตรประจำตัวประชาชน</th>
+          <th>ปัญหาของผู้ประสบปัญหา</th>
+          <th>ข้อมูล</th>
+          <th>สถานะการตอบรับ</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>24/12/2567</td>
+          <td>สำนักงานอัยการ</td>
+          <td>ยงยุทธ อะวะศรีไหก</td>
+          <td>เด็กชาย วรเทพ ภู่เทศ</td>
+          <td>1609900523751</td>
+          <td>ความรุนแรงในครอบครัว</td>
+          <td><button class="view-btn">ดูข้อมูล</button></td>
+          <td><button class="accept-btn">ยืนยัน</button></td>
+        </tr>
+        <!-- Add more rows as needed -->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: linear-gradient(180deg, #FAD6A5, #947F62);
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #FAD6A5;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f0f0f0;
+  }
+  
+  .user-details {
+    text-align: right;
+  }
+  
+  .user-details .role {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-details .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Tabs */
+  .tab-container {
+    display: flex;
+    justify-content: flex-start;
+    background: #f6f6f6;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab.active {
+    color: white;
+    background: #ff7b54;
+    border-radius: 5px;
+  }
+  
+  /* Content */
+  .content-container {
+    padding: 20px 40px;
+    background: white;
+    border-radius: 10px;
+    margin: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .actions {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+  }
+  
+  .search-btn,
+  .add-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .search-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .add-btn {
+    background: #ff7b54;
+    color: white;
+  }
+  
+  /* Table */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .data-table th {
+    background: #f6f6f6;
+    font-weight: bold;
+  }
+  
+  .view-btn {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .accept-btn {
+    padding: 5px 10px;
+    border: 1px solid #118B50;
+    background: #118B50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+</style>

@@ -3,57 +3,68 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Management Information System</title>
+  <title>หน้าหลัก - CMIS</title>
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <div id="header"></div>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <section class="intro">
-      <h2>ยินดีต้อนรับสู่ระบบจัดการข้อมูล</h2>
-      <p>ระบบนี้ช่วยในการจัดการข้อมูลผู้ประสบปัญหาสังคมและข้อมูลสำคัญต่าง ๆ อย่างง่ายดายและมีประสิทธิภาพ</p>
-    </section>
-
-    <section class="data-overview">
-      <h2>ข้อมูลล่าสุด</h2>
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>ลำดับ</th>
-              <th>ชื่อ</th>
-              <th>นามสกุล</th>
-              <th>สถานะ</th>
-              <th>วันที่</th>
-              <th>การดำเนินการ</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>สมชาย</td>
-              <td>ใจดี</td>
-              <td>นาย</td>
-              <td>2025-01-08</td>
-              <td><button>ดูข้อมูล</button></td>
-            </tr>
-            <tr>
-              <td colspan="6">ไม่มีข้อมูลในขณะนี้</td>
-            </tr>
-          </tbody>
-        </table>
+  <header class="header">
+    <div class="logo">
+      <img src="assets/images/logo1.png" alt="CMIS Logo">
+    </div>
+    <div class="user-info">
+      <div class="avatar">
+        <img src="assets/images/Avatar1.png" alt="User Avatar">
       </div>
-    </section>
-  </main>
+      <div class="user-details">
+        <p class="role">ชื่อ :</p>
+        <p class="name">ตำแหน่ง :</p>
+      </div>
+    </div>
+  </header>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <p>&copy; 2025 Case Management Information System. All Rights Reserved.</p>
-  </footer>
+  <div class="tab-container">
+    <button class="tab active">เอกสารเข้าใหม่</button>
+    <button class="tab">รายชื่อ</button>
+  </div>
 
-  <script src="assets/js/main.js"></script>
+  <div class="content-container">
+    <h1>หน้าหลัก</h1>
+    <div class="actions">
+      <div class="search">
+      <input type="text" placeholder="ค้นหา" class="search-input">
+      <button class="search-btn">ค้นหา</button></div>
+      <div class="add">
+      <button class="add-btn">เพิ่มผู้ประสบปัญหา</button>
+    </div>
+    </div>
+    
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>วันที่แจ้งเหตุ</th>
+          <th>ชื่อ - นามสกุล ผู้ประสบปัญหา</th>
+          <th>เลขบัตรประจำตัวประชาชน</th>
+          <th>สถานภาพการส่งต่อ</th>
+          <th>สถานะการดำเนินการ</th>
+          <th>เอกสารที่ส่งคำสั่ง</th>
+          <th>ข้อมูล</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Row Example -->
+        <tr>
+          <td>24/12/2567</td>
+          <td>นาย จัน วังจร</td>
+          <td>1-620301175-97-0</td>
+          <td><span class="status received">รับเข้าอยู่</span></td>
+          <td><span class="status processing">กำลังดำเนินการ</span></td>
+          <td><span class="status not-received">ยังไม่ได้รับ</span></td>
+          <td><button class="view-btn">ดูข้อมูล</button></td>
+        </tr>
+        <!-- Add more rows -->
+      </tbody>
+    </table>
+  </div>
 </body>
 </html>

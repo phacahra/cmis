@@ -1,235 +1,184 @@
 /* General Styles */
-/* header */
-/* Header Styles */
-/* Header Styles */
-.header {
-    border: 2px solid white;
-    border-radius: 8px; /* ทำให้ขอบมน */
-    box-sizing: border-box;
-    background-color: #0056b3; /* สีน้ำเงิน */
-    color: white;
-    padding: 15px 20px; /* ระยะห่างด้านใน */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background: #FFD3B6;
+  }
+  
+  .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* ให้อยู่เหนือส่วนอื่น */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* โลโก้และข้อความ */
-.header .logo {
+    padding: 0 40px 0 20px;
+    background: white;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .logo img {
+    width: 50px;
+  }
+  
+  .user-info {
     display: flex;
     align-items: center;
-}
-
-.header .logo img {
-    height: 40px;
-    margin-right: 10px; /* เว้นช่องระหว่างโลโก้กับข้อความ */
-}
-
-.header .logo h2 {
-    font-size: 18px;
-    margin: 0;
-    font-weight: bold;
-    color: white;
-}
-
-/* Navbar Styles */
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    gap: 15px; /* ช่องว่างระหว่างปุ่ม */
-}
-
-/* ปุ่ม Navbar */
-.navbar ul button {
-    background: transparent;
-    border: 1.26px solid white;
-    color: white;
-    font-weight: bold;
-    border-radius: 100px;
-    padding: 5px 5px; /* ระยะห่างด้านในของปุ่ม */
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Hover Effect สำหรับปุ่ม */
-.navbar ul button:hover {
-    background-color: #6ab5ff; /* สีพื้นหลังเมื่อ hover */
-    color: white;
-}
-
-/* Avatar Button */
-.navbar ul button .avatar {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    object-fit: cover; /* ทำให้ภาพ Avatar สัดส่วนถูกต้อง */
-}
-
-/* ปุ่ม Avatar พิเศษ */
-.avatar-button {
-    padding: 5px;
-    border-radius: 50%;
+    gap: 10px;
+  }
+  
+  .avatar img {
     width: 40px;
-    height: 40px;
+    border-radius: 50%;
+    background-color: #666;
+  }
+  
+  .user-details .role {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .user-details .name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Tabs */
+  .tab-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    background: #FFD3B6;
+    padding: 0 45px;
+
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    margin: 10px 2px 0 10px;
     border: none;
     background: transparent;
+    font-size: 16px;
     cursor: pointer;
-}
+    transition: all 0.3s ease;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 5px 5px 0 0;
+    opacity: 50%;
+  }
 
-.avatar-button img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-}
+  .tab:hover {
+    color: white;
+    background: #ff7b54;
+    opacity: 100%;
+    border-radius: 5px 5px 0 0;
+  }
 
-.add-button img {
-    width: 10%;
-    position: relative;
-}
-
-
-/* Dropdown Container */
-.dropdown {
-    position: relative;
-    display: inline-block; /* ใช้ inline-block แทน float เพื่อให้โครงสร้างดีขึ้น */
-}
-
-/* Dropdown Menu */
-.dropdown-menu{
-    display: none; /* ซ่อนเมนูโดยเริ่มต้น */
-    position: absolute;
-    right: 0; /* เมนูชิดขวาของปุ่ม */
-    top: 50px; /* ระยะห่างจากปุ่ม Avatar */
-    background: rgb(70, 70, 70); /* สีพื้นหลังของเมนู */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 8px; /* ขอบมน */
-    z-index: 1000; /* ทำให้เมนูอยู่บนสุด */
-    min-width: 150px; /* ความกว้างขั้นต่ำของเมนู */
-    padding: 10px 0;
-    list-style: none; /* ลบจุด bullet */
-}
-
-/* เมนู Dropdown */
-.dropdown-menu li {
-    padding: 10px 15px;
-}
-
-.dropdown-menu li a {
-    display: block;
-    text-decoration: none;
-    color: #fff; /* เปลี่ยนสีข้อความเป็นสีขาว */
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown-menu li a:hover {
-    background-color: #555; /* เปลี่ยนสีพื้นหลังเมื่อ hover */
-}
-
-/* แสดงเมนูเมื่อมีคลาส active */
-.dropdown-menu.active {
-    display: block; /* แสดงเมนูเมื่อมีคลาส active */
-}
-
-/* Hover Dropdown */
-.dropdown:hover .dropdown-menu {
-    display: block; /* แสดงเมนูเมื่อ Hover */
-}
-
-/* body main */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-}
-
-.navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  .tab.active {
+    color: white;
+    background: #ff7b54;
+    opacity: 100%;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  /* Content */
+  .content-container {
+    padding: 20px 40px 100% 40px;
+    background: white;
+    border-radius: 10px;
+    margin: 0 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .content-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .actions {
     display: flex;
-    gap: 15px;
-}
-
-.navbar ul li {
-    display: inline;
-}
-
-.navbar ul li a {
-    color: white;
-    text-decoration: none;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+  }
+  
+  .search-input {
     padding: 10px;
-}
-
-.navbar ul li a:hover {
-    background-color: #004099;
+    border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.main-content {
-    padding: 20px;
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.primary-button {
+    width: 200px;
+  }
+  
+  .search-btn,
+  .add-btn {
     padding: 10px 20px;
-    background-color: #184E77;
-    color: white;
     border: none;
     border-radius: 5px;
+    font-size: 13px;
     cursor: pointer;
-}
+  }
+  
+  .search-btn {
+    background: #fff;
+    border: 1px solid #ccc;
+  }
 
-.primary-button:hover {
-    background-color: #004099;
-}
+  .search-btn:hover {
+    background: #adadad;
+    border: 1px solid #ccc;
+  }
+  
+  .add-btn {
+    background: #ff7b54;
+    color: white;
+  }
 
-.table-container {
-    overflow-x: auto;
-}
-
-table {
+  .add-btn:hover {
+    background: #ffa68b;
+    color: white;
+  }
+  
+  /* Table */
+  .data-table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-table th,
-table td {
-    border: 1px solid #ddd;
+    margin-top: 20px;
+  }
+  
+  .data-table th,
+  .data-table td {
     padding: 10px;
+    border: 1px solid #ccc;
     text-align: center;
-}
-
-table th {
-    background-color: #184E77;
+  }
+  
+  .data-table th {
+    background: #f6f6f6;
+    font-weight: bold;
+  }
+  
+  /* Status Styles */
+  .status {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
     color: white;
-}
-
-.footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #184E77;
-    color: white;
-}
+  }
+  
+  .status.received {
+    background: #A4F6A5;
+  }
+  
+  .status.processing {
+    background: #FFDCA4;
+  }
+  
+  .status.not-received {
+    background: #A4C6FF;
+  }
+  
+  .view-btn {
+    padding: 5px 10px;
+    border: 1px solid black;
+    background: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
